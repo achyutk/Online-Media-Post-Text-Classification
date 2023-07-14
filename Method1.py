@@ -19,6 +19,8 @@ from sklearn.metrics import f1_score
 from sklearn import linear_model
 from sklearn.svm import SVC
 from sklearn.tree import DecisionTreeClassifier
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.neighbors import KNeighborsClassifier
 from sklearn.model_selection import RepeatedStratifiedKFold
 from sklearn.model_selection import GridSearchCV
 
@@ -152,7 +154,6 @@ score = score.append(metric(y_test,predicted_y_test,"DecisionTreeClassifier_test
 
 """#### Random Forest"""
 
-from sklearn.ensemble import RandomForestClassifier
 rfc = RandomForestClassifier()
 
 cv = RepeatedStratifiedKFold(n_splits=10, n_repeats=3, random_state=1)
@@ -175,7 +176,6 @@ score = score.append(metric(y_test,predicted_y_test,"RandomForestClassifier_test
 
 """#### K Nearest Neighbour"""
 
-from sklearn.neighbors import KNeighborsClassifier
 knn = KNeighborsClassifier()
 knn.fit(X_train, y_train)
 #Prediction on the training set
