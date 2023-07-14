@@ -33,8 +33,8 @@ path='C:/Southampton Studies/ML Tech/Coursework/assignment-comp3222-comp6246-med
 """##### Reading the files"""
 #The files already have necessary features extracted
 
-df_train = pd.read_csv(path+'test_data_extracted.csv') #Reading training file
-df_test = pd.read_csv(path+'training_data_extracted.csv') #Reading testing file
+df_train = pd.read_csv(path+'training_data_extracted.csv') #Reading training file
+df_test = pd.read_csv(path+'test_data_extracted.csv') #Reading testing file
 
 
 """-------------------------------------------------------------------------------------------------------------------------------------"""
